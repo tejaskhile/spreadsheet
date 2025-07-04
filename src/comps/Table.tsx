@@ -95,7 +95,7 @@ const Table = () => {
         <div className="">
             <table className="min-w-full h-screen text-left border-t-[1px] border-[#EEEEEE]" style={{ tableLayout: "auto" }}>
                 <thead className="">
-                    <tr className="text-xs h-[32px]">
+                    <tr className="text-xs h-[32px">
                         <th className="bg-white px-4 py-2 w-[32px]"></th>
                         <th className="bg-[#E2E2E2] px-2 py-[4px] gap-2" colSpan={4}>
                             <div className=" rounded-[4px]  flex items-center gap-2 text-xs font-normal leading-[16px] font-work text-[#545454]">
@@ -210,11 +210,11 @@ const Table = () => {
                         <th className="px-4 py-2 border w-[125px] border-[#fff] text-[#655C80] bg-[#EAE3FC]">Due Date</th>
                         <th className="px-4 py-2 border w-[124px] border-[#fff] text-[#8C6C62] bg-[#FFE9E0]">Est. Value</th>
                         <th className="px-4 py-2 w-[124px] bg-[#fff]"></th>
-                        <th className="bg-[#f5f5f5] h-full border-none"></th>
+                        <th className="bg-[#f5f5f5] h-full border border-[#f5f5f5]"></th>
                     </tr>
                 </thead>
 
-                <tbody className=" h-screen overflow-y-auto" >
+                <tbody className="h-screen overflow-y-auto">
                     {rows.map((row) => (
                         <tr key={row.id} className="h-[32px] font-work font-normal text-xs leading-4 text-[#121212]">
                             <td className="border text-sm text-center text-[#757575]">{row.id}</td>
