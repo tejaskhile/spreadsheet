@@ -14,7 +14,6 @@ import emoji from "../assets/Emoji.svg";
 import calender from "../assets/Calendar.svg";
 
 
-
 const Table = () => {
     const rows = [
         {
@@ -92,7 +91,6 @@ const Table = () => {
         { id: 16, },
         { id: 17, },
     ]
-
     return (
         <div className="">
             <table className="min-w-full h-screen text-left border-t-[1px] border-[#EEEEEE]" style={{ tableLayout: "auto" }}>
@@ -105,12 +103,12 @@ const Table = () => {
                                     <img src={Link} alt="link" className="w-4 h-4" />
                                     Q3 Financial Overview
                                 </div>
-                                <img src={sync} alt="sync" className="w-4 h-4" />
+                                <img src={sync} alt="sync" className="w-4 h-4" onClick={() => console.log('Refresh clicked')} />
                             </div>
                         </th>
                         <th className="px-4 py-2 bg-[#fff]" colSpan={1}></th>
                         <th
-                            className="bg-[#D2E0D4] px-4 py-2 border border-[#fff]"
+                            className="bg-[#D2E0D4] border-t-0 px-4 py-2 border border-[#fff]"
                             colSpan={1}
                         >
                             <div className="flex justify-center items-center gap-1 text-[#505450] leading-5 font-work text-sm font-medium">
@@ -120,7 +118,7 @@ const Table = () => {
                             </div>
                         </th>
                         <th
-                            className="bg-[#DCCFFC] px-4 py-2 border border-[#fff]"
+                            className="bg-[#DCCFFC] px-4 py-2 border-t-0 border border-[#fff]"
                             colSpan={2}
                         >
                             <div className="flex justify-center items-center gap-1 text-[#463E59] leading-5 font-work text-sm font-medium">
@@ -130,7 +128,7 @@ const Table = () => {
                             </div>
                         </th>
                         <th
-                            className="bg-[#FAC2AF] px-4 py-2 border border-[#fff]"
+                            className="bg-[#FAC2AF] px-4 py-2 border-t-0 border border-[#fff]"
                             colSpan={1}
                         >
                             <div className="flex justify-center items-center gap-1 text-[#695149] leading-5 font-work text-sm font-medium">
@@ -140,18 +138,20 @@ const Table = () => {
                             </div>
                         </th>
                         <th
-                            className="bg-[#eeeeee] w-[124px] border-x-2 border-dotted border-[#CBCBCB] h-full"
+                            className="bg-[#eeeeee] w-[124px] h-full border-0"
                             colSpan={1}
                         >
                             <div className="flex justify-center items-center ">
                                 <img src={add} alt="" className="w-5 h-5" />
                             </div>
                         </th>
+                        <th className="bg-[#f5f5f5] w-[25px] h-full">
+                        </th>
                     </tr>
 
-                    <tr className="px-4 py-2 border w-[32px] h-[32px] border-[#fff] bg-[#eeeeee] text-xs text-[#757575] font-work font-normal ">
-                        <th className="px-3 py-2 gap-1 border-b-0">
-                            <img src={hash} alt="hash" className="w-4 h-4" />
+                    <tr className="px-4 py-2 border-y h-[32px] border-[#fff] bg-[#eeeeee] text-xs text-[#757575] font-work font-normal ">
+                        <th className="pl-1 gap-1 border border-[#fff]">
+                            <img src={hash} alt="hash" className="w-5 h-4" />
                         </th>
                         <th className="pl-2 pr-1 py-2 w-[256px] h-full border border-[#fff]">
                             <div className="gap-1 flex justify-between">
@@ -209,13 +209,15 @@ const Table = () => {
                         <th className="px-4 py-2 border w-[125px] border-[#fff] text-[#655C80] bg-[#EAE3FC] ">Priority</th>
                         <th className="px-4 py-2 border w-[125px] border-[#fff] text-[#655C80] bg-[#EAE3FC]">Due Date</th>
                         <th className="px-4 py-2 border w-[124px] border-[#fff] text-[#8C6C62] bg-[#FFE9E0]">Est. Value</th>
-                        <th className="px-4 py-2 w-[124px] border-x-2 border-dotted border-[#CBCBCB] bg-[#fff]"></th>
+                        <th className="px-4 py-2 w-[124px] bg-[#fff]"></th>
+                        <th className="bg-[#f5f5f5] h-full border-none"></th>
                     </tr>
                 </thead>
-                <tbody className="h-screen overflow-y-auto">
+
+                <tbody className=" h-screen overflow-y-auto" >
                     {rows.map((row) => (
-                        <tr key={row.id} className="font-work font-normal text-xs leading-4 text-[#121212]">
-                            <td className="border px-4 py-2 text-[#757575]">{row.id}</td>
+                        <tr key={row.id} className="h-[32px] font-work font-normal text-xs leading-4 text-[#121212]">
+                            <td className="border text-sm text-center text-[#757575]">{row.id}</td>
                             <td className="border px-2">
                                 <input
                                     value={row.job}
@@ -228,7 +230,7 @@ const Table = () => {
                                     className="w-full outline-none bg-transparent text-right"
                                 />
                             </td>
-                            <td className="border px-3 text-center">
+                            <td className="border px-3 text-center h-[32px]">
                                 <div
                                     className={`inline-block px-[5px] py-1 gap-2 text-center rounded-[100px] font-medium
                                     ${row.status === "In-process"
@@ -247,7 +249,7 @@ const Table = () => {
                                 >
                                     <input
                                         value={row.status || ""}
-                                        className="outline-none bg-transparent text-center"
+                                        className="outline-none border-none bg-transparent text-center"
                                         style={{ width: ((row.status || "")).length + "ch" }}
                                         readOnly
                                     />
@@ -295,7 +297,13 @@ const Table = () => {
                                     className="w-full outline-none bg-transparent text-right"
                                 />
                             </td>
-                            <td className="border-x-2 border-dotted border-[#CBCBCB]">
+                            <td className="border border-[#eeeeee]">
+                                <input
+                                    value={""}
+                                    className="w-full outline-none bg-transparent text-right"
+                                />
+                            </td>
+                            <td className="bg-[#f5f5f5]">
                                 <input
                                     value={""}
                                     className="w-full outline-none bg-transparent text-right"
@@ -305,7 +313,7 @@ const Table = () => {
                     ))}
                 </tbody>
             </table>
-        </div>
+        </div >
     );
 };
 

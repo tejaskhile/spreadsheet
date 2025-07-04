@@ -25,12 +25,12 @@ const Header: React.FC = () => {
             </div>
             <div className='flex items-center gap-[4px]'>
                 <div className='flex items-center gap-[8px] rounded-md  p-[12px] bg-[#f6f6f6] '>
-                    <img className='w-[16px] h-[16px]' src={searchIcon} alt="search" />
+                    <img className='w-[16px] h-[16px]' src={searchIcon} alt="search" onClick={() => console.log('Search clicked')} />
                     <input className='bg-transparent w-[105px] text-xs border-none outline-none font-normal leading-4 text-[#757575] text-left' type="text" placeholder='Search within sheet' />
                 </div>
-                <img src={bellIcon} alt="Notifications" />
+                <img src={bellIcon} alt="Notifications" onClick={() => console.log('Notifications clicked')} />
                 <div className='flex items-center gap-[8px] py-[6px] pr-[12px] pl-[8px]'>
-                    <img src={pic} alt="" />
+                    <img src={pic} alt="" onClick={() => console.log('Profile clicked')} />
                     <div>
                         <p className='font-work leading-4 text-xs text-[#121212]'>John Doe</p>
                         <p className='font-work leading-4 text-xs text-[#757575]'>john.doe...</p>
