@@ -4,6 +4,11 @@ This project is a static, front-end-only React prototype replicating a spreadshe
 
 ---
 
+## Live link
+https://tejaskhile.github.io/spreadsheet/
+
+---
+
 ## 📌 Project Objective
 
 The objective of this assignment is to create a **pixel-perfect static React prototype** that matches the design of a spreadsheet view shared via Figma.
