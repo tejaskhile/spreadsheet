@@ -1,3 +1,62 @@
+# 🧠 React Spreadsheet UI – Intern Assignment (Inscript)
+
+This project is a static, front-end-only React prototype replicating a spreadsheet view, based on the provided Figma design. It aims to simulate a Google Sheets/Excel-like experience as part of the React Internship assignment for Inscript.
+
+---
+
+## 📌 Project Objective
+
+The objective of this assignment is to create a **pixel-perfect static React prototype** that matches the design of a spreadsheet view shared via Figma.
+
+---
+
+## 🖼️ Figma Design Reference
+
+- [🔗 Click here to view the Figma file](https://www.figma.com/design/3nywpu5sz45RrCmwe68QZP/Intern-Design-Assigment?node-id=2-2535&t=DJGGMt8I4fiZjoIB-1)
+
+---
+
+## 🚀 Tech Stack
+
+| Tech                  | Description                                |
+| --------------------- | ------------------------------------------ |
+| **React 18**          | UI library used to build the app structure |
+| **TypeScript**        | Type-safe codebase with strict mode        |
+| **Tailwind CSS**      | Utility-first CSS framework for styling    |
+| **custom-table**      | Grid handling and table logic              |
+| **CRA**               | Project bootstrapping                      |
+| **ESLint + Prettier** | For linting and consistent formatting      |
+
+---
+
+## 🧩 Features
+
+- ✅ **Pixel-perfect design**: Matches the Figma mockup with close visual fidelity
+- 🧠 **Spreadsheet-like interaction**: Basic table interactions mimicking Google Sheets
+- 🎛️ **Fully interactive UI**: All buttons and tabs either change internal state or log to the console
+- ✅ **Code quality**: Lints cleanly and passes type checks
+
+---
+
+## Project Structure Overview
+
+📦 react-intern-spreadsheet
+├── public/  
+├── src/
+│ ├── assets/ # Icons, SVGs, etc.
+│ ├── comps/ # Reusable components (Table, Toolbar, etc.)
+│ ├── styles/  
+│ ├── App.tsx # Root component
+│ ├── Main.tsx  
+│ └── index.css # Tailwind base styles
+├── package.json
+├── tsconfig.json
+└── README.md
+
+## 🛠️ Installation & Setup
+
+Follow the steps below to set up and run the project locally.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,3 +103,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+```
+
+```
