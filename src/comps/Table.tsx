@@ -99,7 +99,7 @@ const Table = () => {
                         <th className="bg-white px-4 py-2 w-[32px]"></th>
                         <th className="bg-[#E2E2E2] px-2 py-[4px] gap-2" colSpan={4}>
                             <div className=" rounded-[4px]  flex items-center gap-2 text-xs font-normal leading-[16px] font-work text-[#545454]">
-                                <div className="flex items-center gap-1 p-[6px] bg-[#eeeeee] rounded-[4px]">
+                                <div className="flex items-center gap-1 p-[6px] bg-[#eeeeee] rounded-[4px]" onClick={() => console.log('Current file clicked')}>
                                     <img src={Link} alt="link" className="w-4 h-4" />
                                     Q3 Financial Overview
                                 </div>

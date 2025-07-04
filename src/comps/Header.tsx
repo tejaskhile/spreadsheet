@@ -7,7 +7,7 @@ import pic from '../assets/pic.svg'
 
 const Header: React.FC = () => {
     return (
-        <div className='h-[56px] w-full px-[16px] py-[8px] flex items-center text-center justify-between border-b-[1px] border-[#EEEEEE]'>
+        <div className='cursor-pointer h-[56px] w-full px-[16px] py-[8px] flex items-center text-center justify-between border-b-[1px] border-[#EEEEEE]'>
             <div className='w-[343px] flex items-center gap-[16px]'>
                 <div>
                     <img src={panel} alt="panel" />
